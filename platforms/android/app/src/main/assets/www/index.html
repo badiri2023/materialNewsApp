@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com https://fonts.gstatic.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-eval'; style-src https://cdn.jsdelivr.net https://fonts.googleapis.com 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>Materialize 2025</title>
+    <!-- Fonts Google -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- CSS materialize -->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <!-- CSS personalitzat -->
+    <link rel="stylesheet" href="css/style.css" media="screen,projection" />
+  </head>
+  <body>
+ 
+    <!-- AQUI VAN ELS CONTINGUTS -->
+<!-- Botón para abrir el menú -->
+<a href="#" data-target="slide-out" class="sidenav-trigger btn">
+  <i class="material-icons">menu</i>
+</a>
+
+   <!-- Sidenav -->
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <a href="#user"><img class="circle" src="img/logo.png"></a>
+        <a href="#name"><span class="black-text name">Juan Pérez</span></a>
+        <a href="#email"><span class="black-text email">juan@example.com</span></a>
+      </div>
+    </li>
+    <li><a href="#tab1"><i class="material-icons">article</i>Noticias</a></li>
+    <li><a href="#tab2"><i class="material-icons">person</i>Perfil</a></li>
+    <li><a href="#tab3"><i class="material-icons">settings</i>Ajustes</a></li>
+  </ul>
+
+  <!-- Swipeable -->
+
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab col s3"><a href="#tab1">Noticias</a></li>
+        <li class="tab col s3"><a href="#tab2">Perfil</a></li>
+        <li class="tab col s3"><a href="#tab3">Ajustes</a></li>
+      </ul>
+    </div>
+    <div id="tab1" class="col s12">Contenido de Noticias</div>
+    <div id="tab2" class="col s12">Contenido de Perfil</div>
+    <div id="tab3" class="col s12">Contenido de Ajustes</div>
+  </div>
+
+    <!-- cordova lib -->
+    <script src="cordova.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <!-- init -->
+    <script src="js/index.js"></script>
+ 
+  </body>
+</html>
