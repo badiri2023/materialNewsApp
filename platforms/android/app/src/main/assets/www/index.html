@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com https://fonts.gstatic.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-eval'; style-src https://cdn.jsdelivr.net https://fonts.googleapis.com 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src *; img-src 'self' data: content: https:; connect-src 'self' https://api.spaceflightnewsapi.net;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
     <title>Materialize 2025</title>
     <!-- Fonts Google -->
     <link
@@ -21,9 +22,18 @@
  
     <!-- AQUI VAN ELS CONTINGUTS -->
 <!-- Botón para abrir el menú -->
-<a href="#" data-target="slide-out" class="sidenav-trigger btn">
-  <i class="material-icons">menu</i>
-</a>
+<div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue darken-3">                
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+                    <i class="material-icons">Menu</i>
+                </a>
+                <ul class="right">
+                    <li><a href="#" onclick="cargarNoticias()"><i class="material-icons">refresh</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
    <!-- Sidenav -->
 
@@ -35,9 +45,9 @@
         <a href="#email"><span class="black-text email">juan@example.com</span></a>
       </div>
     </li>
-    <li><a href="#tab1"><i class="material-icons">article</i>Noticias</a></li>
-    <li><a href="#tab2"><i class="material-icons">person</i>Perfil</a></li>
-    <li><a href="#tab3"><i class="material-icons">settings</i>Ajustes</a></li>
+    <li><a href="#tab1"><i class="material-icons"></i>Noticias</a></li>
+    <li><a href="#tab2"><i class="material-icons"></i>Perfil</a></li>
+    <li><a href="#tab3"><i class="material-icons"></i>Ajustes</a></li>
   </ul>
 
   <!-- Swipeable -->
@@ -50,7 +60,11 @@
         <li class="tab col s3"><a href="#tab3">Ajustes</a></li>
       </ul>
     </div>
-    <div id="tab1" class="col s12">Contenido de Noticias</div>
+    <div id="tab1" class="col s12">
+      <div class="row" id="noticias-container">
+        </div>
+    </div>
+    
     <div id="tab2" class="col s12">Contenido de Perfil</div>
     <div id="tab3" class="col s12">Contenido de Ajustes</div>
   </div>
